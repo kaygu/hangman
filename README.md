@@ -4,9 +4,9 @@
 
 ## Becode Project 01
 
-Hangman is a game where you must find a word by suggesting letters within a certain number of guesses. If you don't find it, you get hanged.
+Hangman is a game where you must find a word by suggesting letters within a certain number of guesses. If you don't find it, you get hanged. For more informations about this very complex game, visit the [wikipedia page](https://en.wikipedia.org/wiki/Hangman_(game)).
 
-This project is the very first asignement received BeCode. Its purpose is to apply the python basics we learned in the first days of our training.
+This project is the very first asignement received by BeCode. Its purpose is to apply the python basics we learned in the first days of our training.
 
 ## Minimum Requirments
 
