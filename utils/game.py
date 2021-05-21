@@ -1,6 +1,6 @@
 from random import randint
 import re
-from typing import NoReturn, List
+from typing import List
 
 
 class Hangman:
@@ -8,7 +8,7 @@ class Hangman:
     Hangman is a game where you must find a hidden word in a certain number of tries (5 by default).
     Use start_game() to play
     """
-    def __init__(self) -> NoReturn:
+    def __init__(self) -> None:
         self.possible_words: List[str] = ['becode', 'learning', 'mathematics', 'sessions', 'papers', 'hangman']
         # Takes a random word form self.possible_words. Using randint function
         self.word_to_find: str = self.possible_words[randint(0, len(self.possible_words) - 1)]
@@ -19,7 +19,7 @@ class Hangman:
         self.turn_count: int = 0
         self.error_count: int = 0
 
-    def _play(self) -> NoReturn:
+    def _play(self) -> None:
         """
         This method prompts the user to guess a letter, then checks if the guess is correct or not
         Asks again until the prompt format is respected
@@ -48,19 +48,19 @@ class Hangman:
 Word: {" ".join(self.correctly_guessed_letters)}\n\
 Misses: {", ".join(self.wrongly_guessed_letters)}\n')
 
-    def _well_played(self) -> NoReturn:
+    def _well_played(self) -> None:
         """
         This method sends a message when you finished (and won) the game
         """
         print(f'You found the word: {self.word_to_find} in {self.turn_count} turns with {self.error_count} error(s)!')
 
-    def _game_over(self) -> NoReturn:
+    def _game_over(self) -> None:
         """
         This method sends a message when you are game over
         """
         print('game over...')
 
-    def start_game(self) -> NoReturn:
+    def start_game(self) -> None:
         """
         This method is the game main loop. Calls play() evert turn, and checks if game is won or lost
         """
