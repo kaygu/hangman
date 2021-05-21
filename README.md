@@ -15,8 +15,17 @@ Python 3.6
 No external packages
 ```
 
+## Installation
+
+```bash
+git clone https://github.com/kaygu/hangman-python.git Hangman
+cd Hangman
+python3 main.py
+```
+
 ## Possible imporvements
 
+* Add unit tests
 * Fetch word list online or from dictionary
 * Suggest to play again after game is finished (but remove used word)
 * Add difficulty (more or less lives, guess repeats count as errors, longer words etc)

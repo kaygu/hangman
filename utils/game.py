@@ -5,7 +5,7 @@ from typing import NoReturn, List
 
 class Hangman:
     """
-    Hangman is a game where you must find a hidden word in a certain number of tries.
+    Hangman is a game where you must find a hidden word in a certain number of tries (5 by default).
     Use start_game() to play
     """
     def __init__(self) -> NoReturn:
