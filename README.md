@@ -11,7 +11,7 @@ This project is the very first asignement received by BeCode. Its purpose is to 
 ## Minimum Requirments
 
 ```txt
-Python 3.6
+Python 3.7
 No external packages
 ```
 
@@ -25,7 +25,4 @@ python3 main.py
 
 ## Possible imporvements
 
-* Add unit tests
-* Fetch word list online or from dictionary
-* Suggest to play again after game is finished (but remove used word)
-* Add difficulty (more or less lives, guess repeats count as errors, longer words etc)
+* Add difficulty (more or less lives, guess repeats count as errors, longer/shorter words etc)

@@ -9,7 +9,9 @@ class Hangman:
     Use start_game() to play
     """
     def __init__(self) -> None:
-        self.possible_words: List[str] = ['becode', 'learning', 'mathematics', 'sessions', 'papers', 'hangman']
+        with open('./wordlist.txt', 'r') as io:
+            wordlist = io.read()
+            self.possible_words: List[str] = wordlist.split()
         # Takes a random word form self.possible_words. Using randint function
         self.word_to_find: str = self.possible_words[randint(0, len(self.possible_words) - 1)]
         self.lives: int = 5
@@ -58,7 +60,24 @@ Misses: {", ".join(self.wrongly_guessed_letters)}\n')
         """
         This method sends a message when you are game over
         """
-        print('game over...')
+        print(f'game over...\nThe word to guess was {self.word_to_find}')
+        prompt = input('Play again (y or n)?')
+        if prompt.lower() == 'y':
+            self.reset()
+            self.start_game()
+    
+    def reset(self) -> None:
+        """
+        Resets the game, removing the previously guessed word from the wordlist
+        """
+        # Remove previous word from wordlist
+        self.possible_words.remove(self.word_to_find)
+        self.word_to_find: str = self.possible_words[randint(0, len(self.possible_words) - 1)]
+        self.lives: int = 5
+        self.correctly_guessed_letters: List[str] = ['_'] * len(self.word_to_find)
+        self.wrongly_guessed_letters: List[str] = []
+        self.turn_count: int = 0
+        self.error_count: int = 0
 
     def start_game(self) -> None:
         """
